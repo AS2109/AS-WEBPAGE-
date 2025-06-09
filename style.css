@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    color: #4a5568;
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.ad-section, .telegram-section {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.ad-section:hover, .telegram-section:hover {
+    transform: translateY(-5px);
+}
+
+.ad-section h2, .telegram-section h2 {
+    color: #4a5568;
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.ad-container {
+    background: #f7fafc;
+    border: 3px dashed #cbd5e0;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ad-placeholder {
+    width: 100%;
+}
+
+.ad-content {
+    background: linear-gradient(45deg, #ff6b6b, #feca57);
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.ad-content h3 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.ad-image {
+    font-size: 3em;
+    margin: 20px 0;
+}
+
+.ad-timer {
+    font-size: 1.2em;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.watch-ad-btn {
+    background: linear-gradient(45deg, #48bb78, #38a169);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 5px 15px rgba(72, 187, 120, 0.4);
+}
+
+.watch-ad-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(72, 187, 120, 0.6);
+}
+
+.watch-ad-btn:disabled {
+    background: #cbd5e0;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.telegram-section {
+    opacity: 0.5;
+    pointer-events: none;
+    transition: all 0.5s ease;
+}
+
+.telegram-section.enabled {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.telegram-info {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.telegram-info p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.telegram-link-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+#telegramLink {
+    padding: 15px;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+#telegramLink:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.join-telegram-btn {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.join-telegram-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+}
+
+.join-telegram-btn:disabled {
+    background: #cbd5e0;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.benefits {
+    background: #f7fafc;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 5px solid #667eea;
+}
+
+.benefits h3 {
+    color: #4a5568;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+}
+
+.benefits ul {
+    list-style: none;
+}
+
+.benefits li {
+    padding: 8px 0;
+    font-size: 1.1em;
+    color: #666;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* मोबाइल रेस्पॉन्सिव */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    
+    header h1 {
+        font-size: 2em;
+    }
+    
+    .ad-section, .telegram-section {
+        padding: 20px;
+    }
+    
+    .telegram-link-container {
+        flex-direction: column;
+    }
+}
+
+/* एनीमेशन */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.watch-ad-btn:not(:disabled) {
+    animation: pulse 2s infinite;
+}
+
+.ad-content {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
